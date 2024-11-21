@@ -1,0 +1,24 @@
+# 📚SumPDF[color=#4B89DC][trigger=/^(总结|思维导图)/]
+
+As an expert in biology, your task is to read and understand the provided literature, excluding the methods, acknowledgments, and references sections. 
+
+${
+(async () => {
+  const pdfItems = []
+  for (let item of ZoteroPane.getSelectedItems()) {
+    const pdfItem = item.isPDFAttachment() ? item : await item.getBestAttachment()
+    pdfItem && pdfItems.push(pdfItem)
+  }
+  await window.Meet.OpenAI.uploadFile(pdfItems)
+  return ""
+})()
+}
+
+Organize the content into a mind map structure with the following hierarchical levels:
+
+- **Primary headings** as the title of the PDF, accompanied by a concise summary.
+- **Secondary headings** including the abstract and major sections of the paper.
+- **Tertiary headings** as the subsections within each major section.
+- **Quaternary headings** detailing the content under each subsection, accompanied by a concise summary.
+
+Please ensure the output is in Markdown format and in Chinses, adhering to the structure and instructions provided.
