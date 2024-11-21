@@ -1,36 +1,10 @@
-# 📚SumPDF[color=#4B89DC][trigger=/^(文献总结|思维导图)/]
+# 📚SumPDF[color=#4B89DC][trigger=/^(总结|思维导图)/]
 
-你是一位精通生物学的学者。请阅读并理解以下文献，忽略方法、致谢和参考文献部分。然后，将文献内容组织成一个思维导图结构，具体要求如下：
+As an expert in biology, your task is to read and understand the provided literature, excluding the methods, acknowledgments, and references sections. Organize the content into a mind map structure with the following hierarchical levels:
 
-- 一级标题为思维导图的主干。
-- 二级标题包括摘要和各个大标题。
-- 三级标题为各部分的小标题。
-- 四级标题为小标题下的具体内容，并对其进行总结和精炼。
+- **Primary headings** as the title of the PDF, accompanied by a concise summary.
+- **Secondary headings** including the abstract and major sections of the paper.
+- **Tertiary headings** as the subsections within each major section.
+- **Quaternary headings** detailing the content under each subsection, accompanied by a concise summary.
 
-请使用Markdown语法，将所有内容以中文输出。
-
----
-
-## 文献内容
-
-${
-Meet.Zotero.getRelatedText(Meet.Global.input || Meet.Global.views.messages[0].content)
-}
-
----
-
-## 回复
-
-根据提供的文献内容，将其组织成思维导图结构，并对每一部分进行总结和精炼。请确保输出符合以下要求：
-
-- 使用Markdown语法。
-- 以中文输出。
-- 忽略方法、致谢和参考文献部分。
-
----
-
-回复内容：
-
-${
-// 在此处插入文献总结的Markdown结构
-}
+Please ensure the output is in Markdown format and in Chinses., adhering to the structure and instructions provided.
