@@ -1,4 +1,4 @@
-# 📚SumPDF[color=#4B89DC][trigger=/^(总结|思维导图)/]
+# 📚SumPDF[color=#4B89DC][trigger=/^()/]
 
 As an expert in biology, your task is to read and understand the provided literature, excluding the methods, acknowledgments, and references sections. 
 
